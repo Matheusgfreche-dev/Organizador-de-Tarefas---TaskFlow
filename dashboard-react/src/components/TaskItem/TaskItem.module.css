@@ -1,0 +1,92 @@
+.actions {
+  display: flex;
+  gap: 8px;
+}
+.edit,
+.save {
+  background: transparent;
+  border: 1px solid #4f46e5;
+  color: #c7c7ff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.edit:hover,
+.save:hover {
+  background: #4f46e5;
+  color: white;
+}
+.delete {
+  background: transparent;
+  border: 1px solid #555;
+  color: #aaa;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(2px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+.task {
+  transition:
+    background 0.3s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  position: relative;
+  animation: taskEnter 800ms ease-out;
+}
+.done {
+  opacity: 0.6;
+  transform: translateY(1px);
+}
+
+.done .text {
+  color: #9ca3af;
+}
+.done .text::after {
+  width: 100%;
+}
+.task:hover .delete {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.delete:hover {
+  border-color: #ef4444;
+  color: #ef4444;
+}
+.text {
+  position: relative;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+  transition: color 0.5s ease;
+}
+.text::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 2px;
+  width: 0%;
+  background: #9ca3af;
+  transition: width 0.4s ease;
+}
+
+.task:hover .text {
+  color: #ffffff;
+}
+
+@keyframes taskEnter {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
