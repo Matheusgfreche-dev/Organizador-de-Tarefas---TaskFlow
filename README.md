@@ -4,7 +4,8 @@ Um aplicativo de gerenciamento de tarefas desenvolvido em React, com foco em boa
 
 O projeto permite criar, editar, concluir e filtrar tarefas, mantendo os dados salvos localmente no navegador.
 
-
+---Imagem Ilustrativa
+<img width="793" height="734" alt="Gerenciador de Tarefas" src="https://github.com/user-attachments/assets/59aae67e-1e11-4bba-83c3-1abf9a588610" />
 ##  Funcionalidades
 
 - Criar novas tarefas
@@ -18,7 +19,7 @@ O projeto permite criar, editar, concluir e filtrar tarefas, mantendo os dados s
 - Persistência de dados com **localStorage**
 - Feedback visual com hover, transições e estados ativos
 
----
+
 
 ##  Conceitos e aprendizados
 
